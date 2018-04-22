@@ -1,0 +1,24 @@
+/* Structural Pseudo-classes------------------ */
+
+/*
+div:nth-child(4) {
+  background: #52bab3;
+  color: white;
+}
+*/
+
+/*:nth-of-type*/
+/*
+Using :nth-of-type
+This selector targets the 4th div inside the parent, no matter what type of child elements come before it:
+
+div:nth-of-type(4) {
+  background: #52bab3;
+  color: white;
+}
+*/
+
+div:nth-of-type(even) {
+    background: #52bab3;
+    color: white;
+}

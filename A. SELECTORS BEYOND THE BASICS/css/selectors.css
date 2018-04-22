@@ -1,0 +1,200 @@
+/*^^^^^^^^^^SELECTORS BEYOND THE BASICS^^^^^^^^^^*/
+/*::::::::::ATTRIBUTE SELECTORS::::::::::*/
+/*
+ CSS gives us the flexibility of being able to target an element by any of its HTML attributes and values.
+
+ Using attribute selectors:
+ This attribute selector targets any element that has a class attribute:
+
+     [class] {
+      border: solid 1px #ccc;
+    }
+ To target an input element with a type value of submit, we write:
+
+    input[type="submit"] {
+      background-color: green;
+    }
+ This targets a elements with a target value of _blank:
+
+    a[target="_blank"] {
+      color: tomato;
+    }
+*/
+
+/*
+[class] {
+    color: red;
+}*/
+
+form[class = "form-contact"] {
+    padding: 20px 24px;
+    background: #f4f7f8;
+}
+/*
+Same as regular class declaration
+.form-contact {
+    padding: 20px 24px;
+    background: #f4f7f8;
+}
+*/
+
+
+div[id = "container"] {
+    max-width: 500px;
+    margin: auto;
+}
+
+/*
+Same as regular ID declaration
+#container {
+    max-width: 500px;
+    margin: auto;
+}
+*/
+
+/*
+input[type="text"] {
+    background: #fdfee6;
+}
+*/
+
+/*
+input[placeholder] {
+    background: #fdfee6;
+}
+*/
+
+input[type="email"] {
+    background: #fdfee6;
+}
+
+/*::::::::::STYLING FORM BUTTONS AND LINKS WITH ATTRIBUTE SELECTORS::::::::::*/
+/*
+  Now that we know how to target an element's attribute, let's learn the different ways we can select form buttons and links with attribute selectors.
+
+  Using attribute selectors with form elements:
+  This target an input element with a type value of email:
+
+    input[type="email"] {
+      background: yellow;
+    }
+*/
+
+/*
+input[type="button"], 
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+*/
+
+
+
+a[target="_blank"] {
+    color: #39add1;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+
+/*::::::::::DRY CSS::::::::::*/
+/*
+ DRY stands for "Don’t Repeat Yourself." The main idea with DRY in CSS is to avoid repeating the same bits of code in our style sheet. In this video, we'll take a look at a few example of writing DRY'er CSS.
+
+ DRY Example:
+ CSS:
+
+    .btn {
+     cursor: pointer;   
+     color: #fff;
+     padding-left: 20px;
+     padding-right: 20px;
+    }
+    .default-theme {
+      background-color: coral;
+    }
+HTML:
+
+<input class="btn default-theme" type="submit" value="submit">
+*/
+
+.br {
+    border-radius: .5em;
+}
+
+.avatar {
+    display: block;
+    margin: 0 auto 2em;
+}
+
+.rounded {
+    border-radius: 50%;
+}
+
+.btn {
+    cursor: pointer;
+    font-size: .875em;
+    font-weight: 400;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    opacity: 0.75;
+}
+
+.default {
+    background-color: #52bab3;
+}
+
+.error {
+    background-color: #ff784f;
+}
+
+@media (min-width: 769px) {
+    .inln {
+        width: auto;
+        display: inline-block;
+    }
+    
+    .btn + .btn {
+        margin-left: 20px;
+    }
+}
+
+/*::::::::::CHILD, ADJACENT AND GENERAL SIBLING COMBINATORS::::::::::*/
+/*
+ Combinators give us the flexibility of targeting any siblings of an element. We can use the greater-than sign (>), plus sign (+), or tilde symbol (~) to make our selectors more specific.
+
+ Using combinators:
+The > combinator targets a direct child of an element
+The + combinator targets an element's immediate sibling
+The ~ combinator targets all the specified siblings that follow an element.
+*/
+
+form > a {
+    font-size: .7em;
+}
+
+
+/*
+.btn + .btn {
+        margin-left: 20px;
+    }
+*/
+
+h1 ~ label {
+    background: tomato;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+

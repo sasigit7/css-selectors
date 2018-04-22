@@ -1,0 +1,84 @@
+/* Pseudo-elements -------------------------------- */
+/*
+  ::first-line and ::first-letter
+
+  The ::first-line and ::first-letter pseudo-elements let us target the first line of text and the first character in a line of text.
+
+*/
+
+.intro::first-line {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.intro::first-letter {
+    float: left;
+    font-size: 80px;
+    color: white;
+    padding: 5px 10px;
+    background: #384047;
+    margin: 10px 10px 0 0;
+    border-radius: 5px;
+    line-height: 1;
+}
+
+/*
+  ::before and ::after
+
+  The ::before and ::after pseudo-elements let us insert virtual elements before and after an element’s content. These virtual elements are visible to the user and are style-able with CSS, but they do not appear in the source code.
+
+  What we need to know about pseudo-elements
+  The only way we're able to generate pseudo-elements is with the content property.
+  Pseudo-elements do not work with images and form elements. Replaced elements like input or img have no content, so we shouldn't be able to use generated content for them (source).
+*/
+
+.jpg::before {
+/*    content: "JPG - ";*/
+    content: url(../img/icn-picture.svg);
+/*    font-size: .75em;*/
+    margin-right: 8px;
+}
+
+.zip::before {
+    content: url(../img/icn-zip.svg);
+    margin-right: 8px;
+}
+
+h1::before,
+h1::after {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: coral;
+    margin: 0 10px;
+}
+
+
+/*The attr() CSS Function*/
+/*
+  We're also able to write simple CSS functions to generate content. In this video, we'll see how the attr() function inserts an element's attribute value as page content. Before we wrap up, we'll do a quick review of the advanced selectors we just learned.
+
+  Using attr()
+  This pseudo-element rule will insert the value of an a element's title attribute after the link's content:
+
+    a::after {
+      content: attr(title);
+    }
+*/
+/* replace title with href to get full url link*/
+.d-loads a::after {
+    content: attr(title);
+    display: inline-block;
+    color: initial;
+    font-size: .65em;
+    margin-left: 5px;
+}
+
+.d-loads a {
+    border: solid 1px;
+}
+
+
+

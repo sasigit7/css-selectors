@@ -1,0 +1,86 @@
+/* Base Styles -------------------------------- */
+
+body {
+	font-family: 'Nunito', sans-serif;
+	line-height: 1.5;
+	color: #384047;
+	padding: 10px 0 80px;
+}
+div {
+	max-width: 610px;
+	margin: auto;
+}
+ul {
+	list-style: none;
+	padding: 0;
+}
+li {
+	margin-bottom: 14px;
+}
+a {
+	color: #4183c4;
+}
+
+/* Substring Matching Attribute Selectors ---- */
+/*
+ With substring matching attribute selectors, we can target specific pieces of an attribute's value, like certain letters and words.
+
+ Using substring matching attribute selectors
+^ tells the browser to match a piece of code that’s at the beginning of an attribute's value
+$ matches a piece at the end of an attribute's value.
+* matches any part of an attribute's value
+*/
+
+a[href^="http://"] {
+    color: #52bab3;
+    text-decoration: none;
+    }
+
+a[href$=".pdf"] {
+    background-image: url('../img/icn-pdf.svg');
+}
+
+a[href$=".jpg"] {
+    background-image: url('../img/icn-picture.svg');
+}
+
+a[href$=".zip"] {
+    background-image: url('../img/icn-zip.svg');
+}
+
+/*Substring Matching Attribute Selectors - "Contains"*/
+/*
+ The “contains” substring matching attribute selector targets an element containing the piece of code we define anywhere in an attribute's value.
+
+ Using substring matching attribute selectors
+^ tells the browser to match a piece of code that’s at the beginning of an attribute's value
+$ matches a piece at the end of an attribute's value
+* matches any part of an attribute's value
+This selector matches an a element containing the word blog anywhere inside its href value:
+
+a[href*="blog"] {
+  border-bottom: solid 2px steelblue;
+}
+*/
+
+a[href*="downloads"] {
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    padding-left: 25px;
+}
+
+img[src*="thumbnails"] {
+    margin: 4px;
+    border: solid 2px;
+    width: 180px;
+    height: 140px;
+}
+
+img[src*="lake"] {
+    border-color: red;
+}
+
+
+
+
+

@@ -1,0 +1,24 @@
+/* :nth-child Pseudo-classes------------------ */
+/*:nth-child*/
+/*
+:nth-child is a powerful structural pseudo-class because it targets child elements based on any position inside a parent.
+
+Using :nth-child
+This target the even li elements in a parent:
+
+    li:nth-child(even) {
+      background: blue;
+      color: white;
+    }
+*/
+/* Arguments => even, odd, an+b where "b" is the first selected item, "a" is the no. of steps from selected "b" and "n" never changes and will stay as same. 
+
+if "a" value is 1 , we can simply write (n + b)
+if "b" value is 0 , we can simply write (an),
+if "a" and "b" are same values, we can simply write (an) too. 
+   */
+
+li:nth-child(-2n + 10) {
+    background: #52bab3;
+    color: white;
+}

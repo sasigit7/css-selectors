@@ -1,0 +1,87 @@
+h1 {
+    text-align: center;
+}
+/* Structural Pseudo-classes------------------ */
+/* :first-child and :last-child
+
+    Quick Reference:::
+    
+   Using :first-child and :last-child
+
+To target the first child div element inside a parent, we can write:
+
+    div:first-child {
+      margin-left: 0;
+    }
+
+To target the last li element in a list, we can write:
+
+    li:last-child {
+      float: right;
+    }
+
+*/
+
+li:first-child {
+    background: #52bab3;
+    color: white;
+}
+
+li:last-child {
+    border: none;
+}
+
+/* :only-child and :empty*/
+/*
+ Besides being able to target first and last child elements with pseudo-classes, the browser can also target only child elements and empty elements.
+
+ Using :only-child and :empty
+ To target a span that is the only child element in a parent div, we can write:
+
+    div span:only-child {
+      font-size: .5em;
+    }
+ 
+To target all elements that have no child content, we can write:
+
+    :empty {
+      background: red;
+    }
+*/
+
+span:only-child {
+    color: #52bab3;
+    font-size: 1.5em;
+}
+
+li:empty {
+    background-color: tomato;
+}
+
+/*Substring Matching Attribute Selectors - "Begins With" and "Ends With"*/
+
+/*
+ With substring matching attribute selectors, we can target specific pieces of an attribute's value, like certain letters and words.
+ 
+ Using substring matching attribute selectors::
+
+^ tells the browser to match a piece of code that’s at the beginning of an attribute's value
+$ matches a piece at the end of an attribute's value.
+* matches any part of an attribute's value
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
